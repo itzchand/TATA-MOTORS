@@ -1,0 +1,25 @@
+{
+  "name": "tata",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install:global": "npm install -g pm2 && npm i -g serve",
+    "start:frontend": "cd tata-traceability && npm i && npm run build && pm2 serve build 3000 --spa",
+    "start:backend" : "cd backend-api && npm i && pm2 start server.js --name tata-motors-backend",
+    "start" : "npm run start:frontend && npm run start:backend",
+    "start:all" : "npm run install:global && npm run start:frontend && npm run start:backend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itzchand/TATA-MOTORS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/itzchand/TATA-MOTORS/issues"
+  },
+  "homepage": "https://github.com/itzchand/TATA-MOTORS#readme"
+}
